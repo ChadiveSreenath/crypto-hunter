@@ -1,0 +1,38 @@
+.bg-banner {
+  background-image: url("../../../public/crypto\ banner.jpg");
+}
+.banner-content {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+.tagline {
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.carousel {
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.carousel-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrat";
+}
+.t-hover :hover {
+  background-color: "#131111" !important;
+}
+.MuiPaginationItem-root{
+    color: gold !important;
+}
