@@ -1,9 +1,7 @@
 import { LinearProgress, Pagination, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { CoinList } from '../../Config/api'
 import { Cryptostate } from '../../Cryptocontext'
 import "../Banner/index.css"
 import { useNavigate } from 'react-router-dom';
@@ -14,20 +12,10 @@ const CoinsTable = () => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    const [coins, setCoins] = useState([])
-    const [loading, setLoading] = useState(false)
     const [search, setSearch] = useState('')
     const navigate = useNavigate()
-    const { currency, symbol } = Cryptostate()
+    const { currency, symbol, coins, loading, FetchData } = Cryptostate()
     const [page, setPage] = useState(1)
-
-    const FetchData = async () => {
-        setLoading(true)
-        const { data } = await axios.get(CoinList(currency))
-        setCoins(data)
-        setLoading(false)
-    }
-
 
     useEffect(() => {
         FetchData()
