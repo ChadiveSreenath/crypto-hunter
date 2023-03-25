@@ -4,11 +4,13 @@ import "./index.css"
 import { useNavigate } from 'react-router-dom'
 import { Cryptostate } from '../../Cryptocontext'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import AuthModal from '../Authentication/AuthModal'
+import Sidebar from '../Authentication/Sidebar'
 
 const Header = () => {
     const navigate = useNavigate()
 
-    const { currency, setCurrency } = Cryptostate()
+    const { currency, setCurrency, user } = Cryptostate()
 
     const darkTheme = createTheme({
         palette: {
@@ -17,6 +19,7 @@ const Header = () => {
     });
 
 
+    
     return (
         <ThemeProvider theme={darkTheme}>
             <AppBar color="transparent" position='static'>
@@ -43,6 +46,9 @@ const Header = () => {
                             <MenuItem value="USD">USD</MenuItem>
                             <MenuItem value="INR">INR</MenuItem>
                         </Select>
+                        {
+                            user ? <Sidebar /> : <AuthModal />
+                        }
                     </Toolbar>
                 </Container>
             </AppBar>

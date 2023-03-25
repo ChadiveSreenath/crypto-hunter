@@ -1,0 +1,37 @@
+.profile-container {
+  height: 92%;
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+}
+.avatar-img {
+  flex: 1 !important;
+  width: 180px !important;
+  cursor: pointer !important;
+  height: 180px !important;
+  object-fit: contain !important;
+  background-color: gold !important;
+}
+.email-text {
+  padding: 1rem;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  text-align: center;
+  word-break: break-word;
+}
+.watchlist-container{
+    height: 180px;
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+    background-color: #5e5e5e;
+}
+.sign-out-container{
+    height: 8%;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}

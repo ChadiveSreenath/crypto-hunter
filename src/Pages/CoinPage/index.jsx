@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -73,6 +73,9 @@ const Coinpage = () => {
               <Typography variant='h6'  >
                 {symbol}{" "}{PriceCutter(data?.market_data?.market_cap[currency.toLowerCase()].toString().slice(0, -6))}M
               </Typography>
+            </span>
+            <span>
+              
             </span>
           </div>
         </div>
