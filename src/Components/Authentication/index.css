@@ -1,6 +1,6 @@
 .profile-container {
   height: 92%;
-  width: 270px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,16 +22,24 @@
   text-align: center;
   word-break: break-word;
 }
-.watchlist-container{
-    height: 180px;
-    width: 100%;
-    flex: 1;
-    overflow-y: scroll;
-    background-color: #5e5e5e;
+.watchlist-container {
+  height: 180px;
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  background-color: #5e5e5e;
 }
-.sign-out-container{
-    height: 8%;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+.sign-out-container {
+  height: 8%;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.watchlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background: #EEBC1D;
+  color: black;
 }
